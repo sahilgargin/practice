@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D66E499A-BFD4-4E68-9EB9-E669D3C30C93</string>
+	<string>C926E3E4-24A4-447D-A157-2805BD598695</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>playground</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>814C692DE561513DBAF3EE8B05FCBC4B2EC2AE14</key>
 		<string>https://github.com/sahilgargin/practice.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Dice-incomplete/Dice Incomplete.xcodeproj/project.xcworkspace</string>
+	<string>rps.playground/playground.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>814C692DE561513DBAF3EE8B05FCBC4B2EC2AE14</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/sahilgargin/practice.git</string>

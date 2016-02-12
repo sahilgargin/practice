@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="rps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhg-mA-Uul">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="rock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Red-a6-0od">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="paper">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7a0-qt-LLI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="scissors">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scissorsSelect:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mfA-g8-ue5"/>
+                                    <segue destination="Ldc-eP-ijP" kind="presentation" id="ZTL-Q3-gZF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nhg-mA-Uul" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="276" id="7mR-wP-MaS"/>
+                            <constraint firstAttribute="centerX" secondItem="Red-a6-0od" secondAttribute="centerX" constant="4.5" id="HDg-UO-aGS"/>
+                            <constraint firstItem="7a0-qt-LLI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="276" id="gBG-Jz-zur"/>
+                            <constraint firstItem="nhg-mA-Uul" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="52" id="gMP-eU-B6z"/>
+                            <constraint firstItem="Red-a6-0od" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="200" id="lXd-9U-UMj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7a0-qt-LLI" secondAttribute="trailing" constant="52" id="s3Z-3f-cgq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nhg-mA-Uul"/>
+                                <exclude reference="Red-a6-0od"/>
+                                <exclude reference="7a0-qt-LLI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="gBG-Jz-zur"/>
+                                <exclude reference="s3Z-3f-cgq"/>
+                                <exclude reference="HDg-UO-aGS"/>
+                                <exclude reference="lXd-9U-UMj"/>
+                                <exclude reference="7mR-wP-MaS"/>
+                                <exclude reference="gMP-eU-B6z"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="nhg-mA-Uul"/>
+                                <include reference="Red-a6-0od"/>
+                                <include reference="7a0-qt-LLI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="gBG-Jz-zur"/>
+                                <include reference="s3Z-3f-cgq"/>
+                                <include reference="HDg-UO-aGS"/>
+                                <include reference="lXd-9U-UMj"/>
+                                <include reference="7mR-wP-MaS"/>
+                                <include reference="gMP-eU-B6z"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="rock" destination="nhg-mA-Uul" id="Im8-b2-XGn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="7Kb-Go-oHF">
+            <objects>
+                <viewController id="Ldc-eP-ijP" customClass="ResultViewController" customModule="rps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0mn-Iq-Pjc"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Bs-kH-doL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2uU-0z-dNL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperCoversRock" translatesAutoresizingMaskIntoConstraints="NO" id="QA5-Mo-Mxf">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vse-LE-0fo">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QA5-Mo-Mxf" firstAttribute="top" secondItem="0mn-Iq-Pjc" secondAttribute="bottom" constant="48" id="CnM-L4-MsT"/>
+                            <constraint firstItem="vse-LE-0fo" firstAttribute="top" secondItem="QA5-Mo-Mxf" secondAttribute="bottom" constant="53" id="On1-kh-6vP"/>
+                            <constraint firstAttribute="centerX" secondItem="vse-LE-0fo" secondAttribute="centerX" id="gOF-NG-oeB"/>
+                            <constraint firstAttribute="centerX" secondItem="QA5-Mo-Mxf" secondAttribute="centerX" constant="-0.5" id="ldm-I5-VJZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="QA5-Mo-Mxf"/>
+                                <exclude reference="vse-LE-0fo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="On1-kh-6vP"/>
+                                <exclude reference="gOF-NG-oeB"/>
+                                <exclude reference="CnM-L4-MsT"/>
+                                <exclude reference="ldm-I5-VJZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="QA5-Mo-Mxf"/>
+                                <include reference="vse-LE-0fo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="On1-kh-6vP"/>
+                                <include reference="gOF-NG-oeB"/>
+                                <include reference="CnM-L4-MsT"/>
+                                <include reference="ldm-I5-VJZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGp-kc-Eit" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084.5" y="233"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PaperCoversRock" width="80" height="60"/>
+        <image name="paper" width="37" height="32"/>
+        <image name="rock" width="37" height="32"/>
+        <image name="scissors" width="37" height="32"/>
+    </resources>
+</document>
